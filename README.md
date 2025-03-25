@@ -35,6 +35,20 @@ Create a directory called `cert` and create 2 fils `certificate.pem`, `privateke
 
 Open the output.pem file and copy & paste corrisponding part to each file.
 
+# Install Nordea SSL certificate
+
+## Download the ssl certificate file
+Download ssl certificate file from [here](https://www.nordea.fi/Images/147-526075/filetransfer.nordea.coma-2025.zip) and unzip.
+
+## Install ROOT CA file to your server
+
+At the moment, exact file name is `SSL.com TLS RSA Root CA 2022.crt`.
+
+```bash
+sudo cp <root ca file>.crt /usr/local/share/ca-certificates/
+sudo update-ca-certificates
+```
+
 # Run the code
 ## GetUserInfo
 
