@@ -56,5 +56,5 @@ $client->changeSoapLocation('https://filetransfer.nordea.com/services/CorporateF
 $request = new \Profit\Nordea\API\SoapTypes\GetUserInfoRequest($config);
 
 $response = $client->getUserInfo($request);
-echo $response->getResponseHeader()->getResponseText();
-echo $response->getResponseHeader()->getResponseCode();
+echo $response->getResponseHeader()->getResponseText() . PHP_EOL;
+echo $response->getResponseHeader()->getResponseCode() . PHP_EOL;

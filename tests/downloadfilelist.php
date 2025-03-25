@@ -57,5 +57,8 @@ $request = new \Profit\Nordea\API\SoapTypes\DownloadFileListRequest($config);
 
 $response = $client->downloadFileList($request);
 print_r($response->getApplicationResponse());
+echo PHP_EOL;
+echo $response->getResponseHeader()->getResponseText() . PHP_EOL;
+echo $response->getResponseHeader()->getResponseCode() . PHP_EOL;
 
 

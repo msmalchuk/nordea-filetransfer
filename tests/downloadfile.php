@@ -63,4 +63,6 @@ $xpath = new DOMXPath($doc);
 
 $contentNode = $xpath->query('//c2b:ApplicationResponse//c2b:Content')->item(0);
 $file_content = base64_decode($contentNode->nodeValue);
+echo $response->getResponseHeader()->getResponseText() . PHP_EOL;
+echo $response->getResponseHeader()->getResponseCode() . PHP_EOL;
 print_r($file_content);
