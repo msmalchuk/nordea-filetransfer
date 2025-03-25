@@ -1,11 +1,11 @@
-# Nordea FileTransfer PHP
+# Nordea FileTransfer PHP Client
 This code is writen for PHP version 7.1
 
-#Installation
+# Installation
 
 ## clone repository and install dependencies
 ```sh
-git clone https://github.com/blackcodefan/nordea-filetransfer
+git clone https://github.com/msmalchuk/nordea-filetransfer
 cd nordea-filetransfer
 composer install
 composer update
