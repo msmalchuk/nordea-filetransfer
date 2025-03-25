@@ -1,0 +1,28 @@
+{
+    "name": "maxim/nordea_api",
+    "authors": [
+        {
+            "name": "scilganon",
+            "email": "scilganon@bigmir.net"
+        }
+    ],
+    "require": {
+        "robrichards/wse-php": "^2.0",
+        "robrichards/xmlseclibs": "2.1.1",
+        "weew/helpers-string": "^1.10",
+        "sabre/dav": "^3.2",
+        "phpro/soap-client": "^0.5.2",
+        "guzzlehttp/guzzle": "^6.2",
+        "http-interop/http-factory-guzzle": "^0.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Profit\\Nordea\\API\\": "src"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    }
+}
