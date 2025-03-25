@@ -3,6 +3,38 @@ This code is writen for PHP version 7.1
 
 # Installation
 
+## PHP and Composer
+
+### Install php 7.1
+
+```bash
+sudo apt install apt-transport-https lsb-release ca-certificates
+sudo wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
+sudo sh -c 'echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list'
+sudo apt update
+
+sudo apt install php7.1
+```
+
+And install additional packages
+```bash
+sudo apt install php7.1-curl php7.1-mbstring php7.1-xml php7.1-cli php7.1-json php7.1-soap
+```
+
+### Install composer  2.2
+
+Follw [this instruction](https://www.digitalocean.com/community/tutorials/how-to-install-composer-on-debian-11-quickstart)
+
+```bash
+sudo apt update
+sudo apt install curl php-cli php-mbstring git unzip
+cd ~
+curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php
+HASH=`curl -sS https://composer.github.io/installer.sig`
+php -r "if (hash_file('SHA384', '/tmp/composer-setup.php') === '$HASH') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+sudo php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer --2.2
+```
+
 ## clone repository and install dependencies
 ```sh
 git clone https://github.com/msmalchuk/nordea-filetransfer
@@ -10,6 +42,8 @@ cd nordea-filetransfer
 composer install
 composer update
 ```
+!Important!
+Do not run composer install as a root/superuser.
 
 ## Download demo certificate
 
@@ -33,7 +67,7 @@ Create a directory called `cert` and create 2 fils `certificate.pem`, `privateke
 /project_root/cert/privatekey.pem
 ```
 
-Open the output.pem file and copy & paste corrisponding part to each file.
+Open the output.pem file and copy & paste corresponding part to each file.
 
 # Install Nordea SSL certificate
 
