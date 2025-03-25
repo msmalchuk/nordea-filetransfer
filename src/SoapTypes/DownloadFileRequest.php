@@ -86,8 +86,8 @@ class DownloadFileRequest implements RequestInterface
         $ap->target_id = '11111111A1';
         $ap->timestamp = $this->timestamp;
         $ap->environment = $this->config->environment;
-        $ap->software_id = 'PHP';
-        $ap->customer_id = $this->config->sender_id;
+        $ap->software_id = $this->config->software_id;
+        $ap->customer_id = $this->config->customer_id;
 
         $this->ApplicationRequest=  new SignedApplicationRequest($ap, $this->config);
     }
